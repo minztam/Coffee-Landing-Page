@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tou'r sme Menu</title>
+    <!-- Linking to Font AweSome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+    <!-- Linking to Order.css -->
+    <link rel="stylesheet" href="order.css">
+</head>
+
+<body>
+    <div class="min-h-screen">
+        <header>
+            <nav class="navbar section-content">
+                <a href="#" class="nav-logo">
+                    <h2 class="logo-text">☕Coffee</h2>
+                </a>
+                <ul class="nav-menu">
+                    <button id="menu-close-button" class="fas fa-times"></button>
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Trang chủ</a>
+                    </li>
+                    <li class="nav-item auth">
+                        <a href="#" class="nav-link" id="authTrigger">Login / Register</a>
+                    </li>
+                    <li class="nav-item cart">
+                        <a href="cart.html" class="nav-link">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="cart-count">0</span>
+                        </a>
+                    </li>
+                </ul>
+                <button id="menu-open-button" class="fas fa-bars"></button>
+            </nav>
+        </header>
+        <!-- Menu Section -->
+        <section class="menu-section">
+            <div class="container">
+                <h2 class="section-title">Menu của chúng tôi</h2>
+
+                <!-- Search Bar -->
+                <div class="search-container">
+                    <input type="text" id="searchInput" placeholder="Tìm kiếm món ăn...">
+                    <i class="fas fa-search search-icon"></i>
+                </div>
+
+                <!-- Categories -->
+                <div class="categories">
+                    <button class="category-btn active" data-category="all">
+                        <i class="fas fa-coffee"></i>
+                        Tất cả
+                    </button>
+                    <button class="category-btn" data-category="coffee">
+                        <i class="fas fa-coffee"></i>
+                        Cà phê
+                    </button>
+                    <button class="category-btn" data-category="tea">
+                        <i class="fas fa-mug-hot"></i>
+                        Trà
+                    </button>
+                    <button class="category-btn" data-category="dessert">
+                        <i class="fas fa-ice-cream"></i>
+                        Tráng miệng
+                    </button>
+                    <button class="category-btn" data-category="food">
+                        <i class="fas fa-utensils"></i>
+                        Đồ ăn
+                    </button>
+                    <button class="category-btn" data-category="snack">
+                        <i class="fas fa-hamburger"></i>
+                        Ăn vặt
+                    </button>
+                    <button class="category-btn" data-category="soup">
+                        <i class="fas fa-soup"></i>
+                        Súp
+                    </button>
+                </div>
+
+                <!-- Menu Items Grid -->
+                <div class="menu-grid" id="menuGrid">
+                    <!-- Menu items will be inserted here by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Auth Modal -->
+        <div class="modal" id="authModal">
+            <div class="modal-content auth-content">
+                <span class="close-btn" id="closeAuthModal">&times;</span>
+                <div class="auth-body">
+                    <!-- Login Form -->
+                    <div id="loginForm" class="auth-form">
+                        <h3>Đăng nhập</h3>
+                        <input type="text" placeholder="Tên tài khoản" id="loginUsername">
+                        <input type="password" placeholder="Mật khẩu" id="loginPassword">
+                        <button class="btn btn-primary" id="loginBtn">Đăng nhập</button>
+                        <p>Chưa có tài khoản? <a href="#" id="showRegisterLink">Đăng ký</a></p>
+                    </div>
+                    <!-- Register Form -->
+                    <div id="registerForm" class="auth-form" style="display: none;">
+                        <h3>Đăng ký</h3>
+                        <input type="text" placeholder="Tên tài khoản" id="registerUsername">
+                        <input type="email" placeholder="Email" id="registerEmail">
+                        <input type="password" placeholder="Mật khẩu" id="registerPassword">
+                        <input type="password" placeholder="Xác nhận mật khẩu" id="confirmPassword">
+                        <button class="btn btn-primary" id="registerBtn">Đăng ký</button>
+                        <p>Đã có tài khoản? <a href="#" id="showLoginLink">Đăng nhập</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal" id="itemModal">
+            <div class="modal-content">
+                <span class="close-btn">&times;</span>
+                <img id="modalImage" src="" alt="" class="modal-image">
+                <div class="modal-details">
+                    <h3 id="modalTitle" class="modal-title"></h3>
+                    <p id="modalDescription" class="modal-description"></p>
+                    <p id="modalPrice" class="modal-price"></p>
+
+                    <!-- Phần thông tin dinh dưỡng -->
+                    <div id="modalNutrition" class="modal-nutrition" style="display: none;">
+                        <!-- Thêm style display:none ban đầu -->
+                        <h4>Thông tin dinh dưỡng (ước tính):</h4>
+                        <ul id="nutritionList">
+                            <!-- Dữ liệu sẽ được chèn vào đây bằng JS -->
+                        </ul>
+                    </div>
+                    <!-- /Phần thông tin dinh dưỡng -->
+
+                    <div class="modal-buttons">
+                        <button class="btn btn-secondary" id="closeModal">Đóng</button>
+                        <button class="btn btn-primary" id="addToCart">Thêm vào giỏ hàng</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cart Modal -->
+        <div class="modal" id="cartModal">
+            <div class="modal-content">
+                <span class="close-btn" id="closeCartModal">&times;</span>
+                <h3 class="modal-title">Giỏ hàng</h3>
+                <div id="cartItemsContainer">
+                    <!-- Cart items sẽ được hiển thị ở đây -->
+                </div>
+                <div id="paymentSection" style="margin-top: 1rem; border-top: 1px solid #ccc; padding-top: 1rem;">
+                    <p style="font-weight: bold;">Tổng tiền: <span id="totalPrice">0đ</span></p>
+                    <button class="btn btn-primary" id="checkoutBtn">Thanh toán</button>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer-section">
+            <div class="section-content">
+                <p class="copyright-text">
+                    © 2024 _LuMa
+                </p>
+
+                <div class="social-link-list">
+                    <a href="#" class="social-link"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" class="social-link"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fa-brands fa-x-twitter"></i></a>
+                </div>
+
+                <P class="policy-text">
+                    <a href="#" class="policy-link">Privacy policy</a>
+                    <span class="separator">&#9679; </span>
+                    <a href="#" class="policy-link">Refund policy</a>
+                </P>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Linking to Order Script -->
+    <script src="order.js"></script>
+</body>
+
+</html>

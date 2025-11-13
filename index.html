@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tou'r sme Coffee</title>
+  <!-- Linking Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  <!-- Linking Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <!-- Linking Style CSS  -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- Header Section Navbar -->
+  <header>
+    <nav class="navbar section-content">
+      <a href="#" class="nav-logo">
+        <h2 class="logo-text">☕Coffee</h2>
+      </a>
+      <ul class="nav-menu">
+        <button id="menu-close-button" class="fas fa-times"></button>
+        <li class="nav-item">
+          <a href="#" class="nav-link">Trang chủ</a>
+        </li>
+        <li class="nav-item">
+          <a href="#about-section" class="nav-link">Về chúng tôi</a>
+        </li>
+        <li class="nav-item">
+          <a href="#menu-section" class="nav-link">Menu</a>
+        </li>
+        <li class="nav-item">
+          <a href="#testimonials-section" class="nav-link">Đánh giá</a>
+        </li>
+        <li class="nav-item">
+          <a href="#gallery-section" class="nav-link">Hình ảnh</a>
+        </li>
+        <li class="nav-item">
+          <a href="#contact-section" class="nav-link">Liên hệ</a>
+        </li>
+      </ul>
+      <button id="menu-open-button" class="fas fa-bars"></button>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- Scroll Up Button -->
+    <button class="scroll-up-btn">
+      <i class="arrow-up"></i>
+    </button>
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="section-content">
+        <div class="hero-details">
+          <h2 class="title">Best Coffee</h2>
+          <h3 class="subtitle">Nguồn năng lượng để bắt đầu một ngày mới</h3>
+          <p class="description">
+            Chào mừng đến với thiên đường cà phê của chúng tôi, nơi mỗi hạt cà
+            phê đều kể một câu chuyện và mỗi tách cà phê đều mang đến niềm
+            vui.
+          </p>
+          <div class="buttons">
+            <a href="order.html" target="_blank" class="button order-now">Order Now</a>
+            <a href="#" class="button contact-us">Contact Us</a>
+          </div>
+        </div>
+        <div class="hero-image-wrapper">
+          <img src="images/coffee-hero-section.png" alt="Hero" class="hero-image" />
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about-section" class="about-section">
+      <div class="section-content">
+        <div class="about-image-wrapper">
+          <img src="images/about_image.jpg" alt="About" class="about-image" />
+        </div>
+        <div class="about-details">
+          <h2 class="section-title">Về chúng tôi</h2>
+          <p class="text">
+            Tại Coffee House ở TP.HCM, Việt Nam, chúng tôi tự hào là điểm đến
+            lý tưởng cho những người yêu thích cà phê và những người tìm kiếm
+            cuộc trò chuyện. Chúng tôi tận tâm mang đến trải nghiệm cà phê đặc
+            biệt trong bầu không khí ấm cúng và hấp dẫn, nơi khách có thể thư
+            giãn, nghỉ ngơi và tận hưởng thời gian thoải mái.
+          </p>
+          <div class="social-link-list">
+            <a href="#" class="social-link"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#" class="social-link"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="social-link"><i class="fa-brands fa-x-twitter"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu-section" class="menu-section">
+      <h2 class="section-title">Our Menu</h2>
+      <div class="section-content">
+        <ul class="menu-list">
+          <li class="menu-item">
+            <div class="menu-item-container">
+              <img src="images/hot-beverages.png" alt="Hot Beverages" class="menu-image" />
+              <div class="price-overlay">
+                <span class="price">50.000đ - 89.000đ</span>
+              </div>
+            </div>
+            <h3 class="name">Hot Beverages</h3>
+            <p class="text">
+              Nhiều loại cà phê nóng hổi giúp bạn sảng khoái và nhẹ nhàng.
+            </p>
+          </li>
+          <li class="menu-item">
+            <div class="menu-item-container">
+              <img src="images/cold-beverages.png" alt="Cold Beverages" class="menu-image" />
+              <div class="price-overlay">
+                <span class="price">55.000đ - 95.000đ</span>
+              </div>
+            </div>
+            <h3 class="name">Cold Beverages</h3>
+            <p class="text">Cà phê mát lạnh, sánh mịn giúp bạn sảng khoái.</p>
+          </li>
+          <li class="menu-item">
+            <div class="menu-item-container">
+              <img src="images/refreshment.png" alt="Refreshment" class="menu-image" />
+              <div class="price-overlay">
+                <span class="price">45.000đ - 75.000đ</span>
+              </div>
+            </div>
+            <h3 class="name">Refreshment</h3>
+            <p class="text">
+              Trái cây và đồ uống mát lạnh giúp bạn cảm thấy sảng khoái.
+            </p>
+          </li>
+          <li class="menu-item">
+            <div class="menu-item-container">
+              <img src="images/special-combo.png" alt="Special Combos" class="menu-image" />
+              <div class="price-overlay">
+                <span class="price">99.000đ - 159.000đ</span>
+              </div>
+            </div>
+            <h3 class="name">Special Combos</h3>
+            <p class="text">
+              Gồm nhiều loại thức ăn và đồ uống yêu thích của bạn
+            </p>
+          </li>
+          <li class="menu-item">
+            <div class="menu-item-container">
+              <img src="images/desserts.png" alt="Desserts" class="menu-image" />
+              <div class="price-overlay">
+                <span class="price">35.000đ - 65.000đ</span>
+              </div>
+            </div>
+            <h3 class="name">Desserts</h3>
+            <p class="text">
+              Thoả mãn vị giác của bạn và đưa bạn vào một hành trình ẩm thực
+              đầy thú vị.
+            </p>
+          </li>
+          <li class="menu-item">
+            <div class="menu-item-container">
+              <img src="images/burger-frenchfries.png" alt="Burger Frenchfries" class="menu-image" />
+              <div class="price-overlay">
+                <span class="price">65.000đ - 120.000đ</span>
+              </div>
+            </div>
+            <h3 class="name">Burger & Frenchfries</h3>
+            <p class="text">Những món ăn nhẹ giúp bạn lấp đầy cơn đói nhỏ.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials-section" class="testimonials-section">
+      <h2 class="section-title">Testimonials</h2>
+      <div class="section-content">
+        <div class="slider-container swiper">
+          <div class="slider-wrapper">
+            <ul class="testimonials-list swiper-wrapper">
+              <li class="testimonial swiper-slide">
+                <img src="images/user_1.jpg" alt="User" class="user-image" />
+                <h3 class="name">Nguyễn Văn A</h3>
+                <i class="feedback">"Rất thích cà phê rang kiểu Pháp ở đây. Hương vị đậm đà, cân bằng, đúng kiểu mình
+                  thích. Chắc chắn sẽ đặt lại lần nữa!"
+                </i>
+              </li>
+              <li class="testimonial swiper-slide">
+                <img src="images/user_2.jpg" alt="User" class="user-image" />
+                <h3 class="name">Nguyễn Thị B</h3>
+                <i class="feedback">"Hỗn hợp espresso này pha lên rất ngon, mình ưng lắm."</i>
+              </li>
+              <li class="testimonial swiper-slide">
+                <img src="images/user_3.jpg" alt="User" class="user-image" />
+                <h3 class="name">Trần Văn C</h3>
+                <i class="feedback">"Mocha thơm ngon tuyệt vời. Cà phê tươi, mùi rất dễ chịu. Giao hàng cũng nhanh nữa!"
+                </i>
+              </li>
+              <li class="testimonial swiper-slide">
+                <img src="images/user_4.jpg" alt="User" class="user-image" />
+                <h3 class="name">Ngô Lan H</h3>
+                <i class="feedback">"Chất lượng cà phê rất tốt! Hạt thì tươi, giao hàng cũng nhanh. Rất đáng để thử."
+                </i>
+              </li>
+              <li class="testimonial swiper-slide">
+                <img src="images/user_5.jpg" alt="User" class="user-image" />
+                <h3 class="name">Đinh Văn K</h3>
+                <i class="feedback">"Đây là loại decaf ngon nhất mình từng uống. Rất mượt và vẫn giữ được hương vị đậm
+                  đà. Giao hàng nhanh chóng nữa."
+                </i>
+              </li>
+            </ul>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-slide-button swiper-button-prev"></div>
+            <div class="swiper-slide-button swiper-button-next"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery-section" class="gallery-section">
+      <h2 class="section-title">Gallery</h2>
+      <div class="section-content">
+        <ul class="gallery-list">
+          <li class="gallery-item">
+            <img src="images/gallery-1.jpg" alt="Gallery" class="gallery-image" />
+          </li>
+          <li class="gallery-item">
+            <img src="images/gallery-2.jpg" alt="Gallery" class="gallery-image" />
+          </li>
+          <li class="gallery-item">
+            <img src="images/gallery-3.jpg" alt="Gallery" class="gallery-image" />
+          </li>
+          <li class="gallery-item">
+            <img src="images/gallery-4.jpg" alt="Gallery" class="gallery-image" />
+          </li>
+          <li class="gallery-item">
+            <img src="images/gallery-5.jpg" alt="Gallery" class="gallery-image" />
+          </li>
+          <li class="gallery-item">
+            <img src="images/gallery-6.jpg" alt="Gallery" class="gallery-image" />
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact-section" class="contact-section">
+      <h2 class="section-title">Contact Us</h2>
+      <div class="section-content">
+        <ul class="contact-info-list">
+          <li class="contact-info">
+            <i class="fa-solid fa-location-crosshairs"></i>
+            <p>Địa Chỉ 123 Hồ Thị Kỷ, Phường 1, Quận 10, TP.HCM</p>
+          </li>
+          <li class="contact-info">
+            <i class="fa-regular fa-envelope"></i>
+            <p>tourme@gmail.com</p>
+          </li>
+          <li class="contact-info">
+            <i class="fa-solid fa-phone"></i>
+            <p>(084) 123-456-789</p>
+          </li>
+          <li class="contact-info">
+            <i class="fa-regular fa-clock"></i>
+            <p>Thứ Hai - Thứ Sáu: 9:00 AM - 5:00 PM</p>
+          </li>
+          <li class="contact-info">
+            <i class="fa-regular fa-clock"></i>
+            <p>Thứ Bảy: 10:00 AM - 4:00 PM</p>
+          </li>
+          <li class="contact-info">
+            <i class="fa-regular fa-clock"></i>
+            <p>Chủ Nhật: Đóng cửa</p>
+          </li>
+          <li class="contact-info">
+            <i class="fa-solid fa-globe"></i>
+            <p>www.tourme.com</p>
+          </li>
+        </ul>
+
+        <form action="#" class="contact-form">
+          <input type="text" placeholder="Your name" class="form-input" required />
+          <input type="email" placeholder="Your email" class="form-input" required />
+          <textarea placeholder="Your message" class="form-input" required></textarea>
+          <button class="submit-button">Submit</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer-section">
+      <div class="section-content">
+        <p class="copyright-text">
+          © 2024 _LuMa
+        </p>
+
+        <div class="social-link-list">
+          <a href="#" class="social-link"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#" class="social-link"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" class="social-link"><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
+
+        <P class="policy-text">
+          <a href="#" class="policy-link">Privacy policy</a>
+          <span class="separator">&#9679; </span>
+          <a href="#" class="policy-link">Refund policy</a>
+        </P>
+      </div>
+    </footer>
+  </main>
+  <!-- Link Swiper Script -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Link custom our script -->
+  <script src="script.js"></script>
+</body>
+
+</html>
